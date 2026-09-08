@@ -1,0 +1,92 @@
+/* 🌱 Smart Crop Health Early Warning System - Custom Agricultural Styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;600&display=swap');
+
+:root {
+    --bg-dark: #041f17;
+    --bg-card: rgba(6, 40, 30, 0.75);
+    --border-accent: rgba(16, 185, 129, 0.25);
+    --emerald-glow: rgba(16, 185, 129, 0.15);
+}
+
+body {
+    background-color: var(--bg-dark);
+    font-family: 'Outfit', sans-serif;
+    color: #f1f5f9;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #02140e;
+}
+::-webkit-scrollbar-thumb {
+    background: #065f46;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #10b981;
+}
+
+/* Agriculture Glassmorphism Cards */
+.agri-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-accent);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.3s ease;
+}
+
+.agri-card:hover {
+    border-color: rgba(16, 185, 129, 0.5);
+    box-shadow: 0 12px 40px 0 rgba(16, 185, 129, 0.15);
+}
+
+.agri-card-flat {
+    background: rgba(4, 31, 23, 0.9);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 0.75rem;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(16, 185, 129, 0.5); }
+}
+
+.animate-glow {
+    animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Leaflet Map Custom Marker Styles */
+.leaflet-container {
+    background-color: #02140e !important;
+    font-family: 'Outfit', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+    background: #04241b !important;
+    color: #f1f5f9 !important;
+    border: 1px solid rgba(16, 185, 129, 0.4) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+}
+
+.leaflet-popup-tip {
+    background: #04241b !important;
+}
+
+/* Input Styles */
+input, select, textarea {
+    color-scheme: dark;
+}
+
+/* Range Slider Styling */
+input[type=range] {
+    accent-color: #10b981;
+}
